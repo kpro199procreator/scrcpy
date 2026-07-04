@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.22.1)
+project(scrcpy_android)
+add_library(scrcpy_android SHARED scrcpy_android.c)
+find_library(log-lib log)
+target_link_libraries(scrcpy_android ${log-lib})
